@@ -8,6 +8,7 @@ export const AddTransaction = () => {
   const [amount, setAmount] = useState(0)
 
   const { addTransaction } = useContext(GlobalContext);
+  const { transactions } = useContext(GlobalContext)
 
   const submit = e => {
     e.preventDefault();
@@ -17,10 +18,18 @@ export const AddTransaction = () => {
       text,
       amount: +amount
     }
-
+    setStorage()
     addTransaction(newTransaction);
+    setText("")
+    setAmount(0)
+    setStorage()
+
+
   }
 
+  const setStorage = () => {
+    localStorage.setItem("transactions", JSON.stringify(transactions))
+  }
 
   return (
     <>
