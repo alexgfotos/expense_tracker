@@ -1,14 +1,12 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from "../Context/GlobalState"
 
-const history = localStorage.getItem("transactions");
-const parsedHistory = JSON.parse(history);
-console.log(...parsedHistory)
+// const history = localStorage.getItem("transactions");
+// const parsedHistory = JSON.parse(history);
+// console.log(...parsedHistory)
 
 export const Transaction = ({ transaction }) => {
     const { deleteTransaction } = useContext(GlobalContext);
-
-    console.log(transaction)
 
 
     const sign = transaction.amount < 0 ? '-' : '+';

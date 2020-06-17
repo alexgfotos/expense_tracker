@@ -19,7 +19,7 @@ export const ExpenseChart = () => {
   ).toFixed(2);
 
 
-  const text = transactions.map(transaction => transaction.text);
+  // const text = transactions.map(transaction => transaction.text);
 
 
   const state = {
