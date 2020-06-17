@@ -18,18 +18,16 @@ export const AddTransaction = () => {
       text,
       amount: +amount
     }
-    setStorage()
+
     addTransaction(newTransaction);
     setText("")
     setAmount(0)
-    setStorage()
-
 
   }
 
-  const setStorage = () => {
-    localStorage.setItem("transactions", JSON.stringify(transactions))
-  }
+  // const setStorage = () => {
+  //   localStorage.setItem("transactions", JSON.stringify(transactions))
+  // }
 
   return (
     <>
